@@ -19,7 +19,7 @@ class LayoutView: UIView {
     @IBOutlet var ImageView2: UIImageView!
     @IBOutlet var ImageView3: UIImageView!
     @IBOutlet var ImageView4: UIImageView!
-    
+
     enum State{
         case layout1, layout2, layout3
     }
@@ -33,7 +33,7 @@ class LayoutView: UIView {
             setLayout(state)
         }
     }
-    
+
     func setImage(image: UIImage) {
         switch imageState {
         case .image1:
@@ -69,5 +69,4 @@ class LayoutView: UIView {
             image4.isHidden = false
         }
     }
-
 }

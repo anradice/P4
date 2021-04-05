@@ -9,15 +9,14 @@ import Foundation
 
 protocol ImagePickerDelegate: class {
     func selectedImage(image: UIImage)
-    func cancel()
 }
 
-class ImagePickerManager: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
+class ImagePickerManager: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     let imagePicker = UIImagePickerController()
     typealias Controller = UIViewController & ImagePickerDelegate
     var controller: UIViewController?
     weak var delegate: ImagePickerDelegate?
-    
+
     init(delegate: Controller) {
         super.init()
         self.controller = delegate
@@ -25,9 +24,8 @@ class ImagePickerManager: NSObject, UIImagePickerControllerDelegate, UINavigatio
         imagePicker.allowsEditing = true
         self.delegate = delegate
     }
-    
-    
-    func CameraOrLibrary() {
+
+    func cameraOrLibrary() {
         let alert = CustomAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
 
         alert.addAction(UIAlertAction(title: "Photo Gallery", style: .default, handler: { (button) in
@@ -40,22 +38,14 @@ class ImagePickerManager: NSObject, UIImagePickerControllerDelegate, UINavigatio
             self.controller?.present(self.imagePicker, animated: true, completion: nil)
         }))
 
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {_ in
-            self.delegate?.cancel()
-        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
 
         controller?.present(alert, animated: true, completion: nil)
     }
-    
+
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let pickedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else { return }
         self.delegate?.selectedImage(image: pickedImage)
-        controller?.dismiss(animated: true, completion: nil)
-
-    }
-    
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        self.delegate?.cancel()
         controller?.dismiss(animated: true, completion: nil)
     }
 }

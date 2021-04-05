@@ -1,12 +1,11 @@
 //
-//  Alert.swift
+//  CustomAlertController.swift
 //  Instagrid
 //
 //  Created by antoine radice on 08/03/2021.
 //
 import UIKit
 import Foundation
-
 
 class CustomAlertController: UIAlertController {
     override open func viewDidLoad() {

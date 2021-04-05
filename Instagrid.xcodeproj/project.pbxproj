@@ -17,7 +17,7 @@
 		7159A40925E2B17F00272EA6 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7159A40825E2B17F00272EA6 /* Delm-Medium.otf */; };
 		715BA76125F66F8E00B41677 /* LayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715BA76025F66F8E00B41677 /* LayoutView.swift */; };
 		715BA76825F6988A00B41677 /* ImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715BA76725F6988A00B41677 /* ImagePickerManager.swift */; };
-		715BA76B25F6A26D00B41677 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715BA76A25F6A26D00B41677 /* Alert.swift */; };
+		715BA76B25F6A26D00B41677 /* CustomAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715BA76A25F6A26D00B41677 /* CustomAlertController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +33,7 @@
 		7159A40825E2B17F00272EA6 /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
 		715BA76025F66F8E00B41677 /* LayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutView.swift; sourceTree = "<group>"; };
 		715BA76725F6988A00B41677 /* ImagePickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerManager.swift; sourceTree = "<group>"; };
-		715BA76A25F6A26D00B41677 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		715BA76A25F6A26D00B41677 /* CustomAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				7159A3FD25E2AD0D00272EA6 /* Info.plist */,
+				7175958C2610E6B6007AA82E /* Manager */,
 				715BA74C25E2B97200B41677 /* model */,
 				715BA74D25E2C2B800B41677 /* view */,
 				715BA74E25E2C2D900B41677 /* controller */,
@@ -78,8 +79,6 @@
 		715BA74C25E2B97200B41677 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				715BA76725F6988A00B41677 /* ImagePickerManager.swift */,
-				715BA76A25F6A26D00B41677 /* Alert.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -114,6 +113,15 @@
 			path = "supporting files";
 			sourceTree = "<group>";
 		};
+		7175958C2610E6B6007AA82E /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				715BA76A25F6A26D00B41677 /* CustomAlertController.swift */,
+				715BA76725F6988A00B41677 /* ImagePickerManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -124,6 +132,7 @@
 				7159A3E825E2AD0A00272EA6 /* Sources */,
 				7159A3E925E2AD0A00272EA6 /* Frameworks */,
 				7159A3EA25E2AD0A00272EA6 /* Resources */,
+				7175959F261B260A007AA82E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -181,12 +190,32 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7175959F261B260A007AA82E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7159A3E825E2AD0A00272EA6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				715BA76B25F6A26D00B41677 /* Alert.swift in Sources */,
+				715BA76B25F6A26D00B41677 /* CustomAlertController.swift in Sources */,
 				7159A3F425E2AD0A00272EA6 /* ViewController.swift in Sources */,
 				715BA76825F6988A00B41677 /* ImagePickerManager.swift in Sources */,
 				715BA76125F66F8E00B41677 /* LayoutView.swift in Sources */,
