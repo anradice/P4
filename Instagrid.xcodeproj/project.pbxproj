@@ -67,20 +67,14 @@
 			isa = PBXGroup;
 			children = (
 				7159A3FD25E2AD0D00272EA6 /* Info.plist */,
+				715BA76A25F6A26D00B41677 /* CustomAlertController.swift */,
+				715BA76725F6988A00B41677 /* ImagePickerManager.swift */,
 				7175958C2610E6B6007AA82E /* Manager */,
-				715BA74C25E2B97200B41677 /* model */,
 				715BA74D25E2C2B800B41677 /* view */,
 				715BA74E25E2C2D900B41677 /* controller */,
 				715BA74F25E2C2FC00B41677 /* supporting files */,
 			);
 			path = Instagrid;
-			sourceTree = "<group>";
-		};
-		715BA74C25E2B97200B41677 /* model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = model;
 			sourceTree = "<group>";
 		};
 		715BA74D25E2C2B800B41677 /* view */ = {
@@ -116,8 +110,6 @@
 		7175958C2610E6B6007AA82E /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				715BA76A25F6A26D00B41677 /* CustomAlertController.swift */,
-				715BA76725F6988A00B41677 /* ImagePickerManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";

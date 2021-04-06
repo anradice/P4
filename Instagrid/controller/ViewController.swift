@@ -28,7 +28,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.imagePicker = ImagePickerManager(delegate: self)
         // Do any additional setup after loading the view.
-
     }
 
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -73,7 +72,7 @@ class ViewController: UIViewController {
         imagePicker?.CameraOrLibrary()
         self.mainView.imageState = .image4
     }
-        
+    
     @IBAction func swipeUp(_ sender: UIPanGestureRecognizer) {
         let translation = sender.translation(in: mainView)
         let screenheight = UIScreen.main.bounds.height
