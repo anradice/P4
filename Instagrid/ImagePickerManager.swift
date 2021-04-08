@@ -34,8 +34,12 @@ class ImagePickerManager: NSObject, UIImagePickerControllerDelegate, UINavigatio
         }))
 
         alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (button) in
-            self.imagePicker.sourceType = .camera
-            self.controller?.present(self.imagePicker, animated: true, completion: nil)
+            if UIImagePickerController.isSourceTypeAvailable(.camera) {
+                self.imagePicker.sourceType = .camera
+                self.controller?.present(self.imagePicker, animated: true, completion: nil)
+             } else {
+               print("La caméra n'est pas accessible")
+             }
         }))
 
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))

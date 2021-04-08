@@ -54,22 +54,22 @@ class ViewController: UIViewController {
     }
 
     @IBAction func didTapButtonImage1(_ sender: UIButton) {
-        imagePicker?.CameraOrLibrary()
+        imagePicker?.cameraOrLibrary()
         self.mainView.imageState = .image1
     }
 
     @IBAction func didTapButtonImage2(_ sender: UIButton) {
-        imagePicker?.CameraOrLibrary()
+        imagePicker?.cameraOrLibrary()
         self.mainView.imageState = .image2
     }
 
     @IBAction func didTapButtonImage3(_ sender: UIButton) {
-        imagePicker?.CameraOrLibrary()
+        imagePicker?.cameraOrLibrary()
         self.mainView.imageState = .image3
     }
 
     @IBAction func didTapButtonImage4(_ sender: UIButton) {
-        imagePicker?.CameraOrLibrary()
+        imagePicker?.cameraOrLibrary()
         self.mainView.imageState = .image4
     }
     
